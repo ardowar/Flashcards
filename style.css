@@ -1,0 +1,71 @@
+body
+{
+    background: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/fuji-and-sakura-royalty-free-image-144483163-1562593125.jpg?crop=1.00xw:0.752xh;0,0.236xh&resize=1200:*");
+    background-size: cover;
+
+}
+h1
+{
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+}
+
+.card-container
+{
+
+    height: 350px;
+    width: 350px;
+    position: relative;
+    left:35%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.card
+{
+    height: 100px;
+    width: 100px;
+    margin: 5px;
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+}
+.front,.back
+{
+    height: 100%;
+    width: 100%;
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+    border-radius: 10px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.front
+{
+    background: indianred;
+    z-index: 2;
+    backface-visibility: hidden;
+}
+.back
+{
+    background: antiquewhite;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+.card:hover
+{
+    transform: rotateY(180deg);
+}
+
+.card-container
+{
+    perspective: 1000px;
+}
+
